@@ -1,20 +1,29 @@
+using System;
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.Events;
 
-public class Healthup : MonoBehaviour
+public class HealthUp : MonoBehaviour
 {
-    private UnityEvent getHealth;
-    // Start is called before the first frame update
-    void Start()
+    [System.Serializable]
+    public class HealthUpEvent : UnityEvent<int> { }
+
+    public HealthUpEvent OnHealthUp;
+
+    private void OnTriggerEnter(Collider other)
     {
-        if (getHealth == null)
+        if (other.CompareTag("Player"))
         {
-            getHealth = new UnityEvent();
+            int healthUpAmount = 20;
+            
+            OnHealthUp.Invoke((healthUpAmount));
+
+            Destroy(gameObject);
+            
         }
     }
-    
+
 
     // Update is called once per frame
     void Update()
