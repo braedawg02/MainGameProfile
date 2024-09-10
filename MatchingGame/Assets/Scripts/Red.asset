@@ -9,6 +9,7 @@ MonoBehaviour:
   m_GameObject: {fileID: 0}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 8c196f87fd00e464e8f2869444256dcc, type: 3}
-  m_Name: cats
+  m_Script: {fileID: 11500000, guid: 0752a0fc165b04c82b4a7afea8385326, type: 3}
+  m_Name: Red
   m_EditorClassIdentifier: 
+  value: {r: 1, g: 0, b: 0, a: 1}
