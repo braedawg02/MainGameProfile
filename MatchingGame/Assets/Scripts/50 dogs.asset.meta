@@ -1,8 +1,15 @@
 fileFormatVersion: 2
+<<<<<<<< HEAD:MatchingGame/Assets/Scripts/50 dogs.asset.meta
 guid: 0f8b12409b09b4638a8dd85783d458a3
 NativeFormatImporter:
   externalObjects: {}
   mainObjectFileID: 11400000
+========
+guid: 354646312f2544924bdb798362705018
+folderAsset: yes
+DefaultImporter:
+  externalObjects: {}
+>>>>>>>> origin/main:Work in project/Assets/Matching Game.meta
   userData: 
   assetBundleName: 
   assetBundleVariant: 

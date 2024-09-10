@@ -1,8 +1,14 @@
 fileFormatVersion: 2
+<<<<<<<< HEAD:MatchingGame/Assets/Scripts/Score.asset.meta
 guid: 58b09c12bf8494249accc806bf7cecac
 NativeFormatImporter:
   externalObjects: {}
   mainObjectFileID: 11400000
+========
+guid: 8616c3f2792394d48b99b7504aeabc0c
+DefaultImporter:
+  externalObjects: {}
+>>>>>>>> origin/main:Work in project/Assets/Matching Game/Matching game.unity.meta
   userData: 
   assetBundleName: 
   assetBundleVariant: 
