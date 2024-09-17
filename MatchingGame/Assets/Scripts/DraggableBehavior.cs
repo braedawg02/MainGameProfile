@@ -11,7 +11,7 @@ public class DraggableBehavior : MonoBehaviour
 
     public Vector3 position, offset;
     public UnityEvent startDragEvent, endDragEvent;
-    // Start is called before the first frame update
+    
     void Start()
     {
         cameraObj = Camera.main;
