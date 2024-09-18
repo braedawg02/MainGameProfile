@@ -5,7 +5,7 @@ using UnityEngine.Events;
 
 public class CoroutineBehavior : MonoBehaviour
 {
-    public UnityEvent startEvent, repeatEvent, endEvent, repeatUntilFalseEvent;
+    public UnityEvent startEvent, startCountEvent, repeatCountEvent, endCountEvent, repeatUntilFalseEvent;
 
     public bool canRun;
     public IntData counterNum;
@@ -13,25 +13,44 @@ public class CoroutineBehavior : MonoBehaviour
     private WaitForSeconds wfsObj;
     private WaitForFixedUpdate wffuObj;
 
-    IEnumerator Counting()
+    private void Start()
     {
         wfsObj = new WaitForSeconds(seconds);
         wffuObj = new WaitForFixedUpdate();
-
         startEvent.Invoke();
+    }
+    public void StartCounting()
+    {
+        StartCoroutine(Counting());
+    }
+    IEnumerator Counting()
+    {
+        
+        startCountEvent.Invoke();
         yield return wfsObj;
-
         while (counterNum.value > 0)
         {
             Debug.Log("Counter: " + counterNum.value);
-            repeatEvent.Invoke();
+            repeatCountEvent.Invoke();
             counterNum.value--;
             yield return wfsObj;
 
         }
         Debug.Log("Coroutine End");
-        endEvent.Invoke();
-        
+        endCountEvent.Invoke();
+    }
 
+    public void StartRepeatUntilFalse()
+    {
+        canRun = true;
+        StartCoroutine(RepeatUntilFalse());
+    }
+    IEnumerator RepeatUntilFalse()
+    {
+        while (canRun)
+        {
+            yield return wfsObj;
+            repeatUntilFalseEvent.Invoke();
+        }
     }
 }
