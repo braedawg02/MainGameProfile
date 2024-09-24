@@ -13,6 +13,7 @@ public class IntData : ScriptableObject
     {
         if (value >= obj.value)
         {
+            
         }
         else
         {
