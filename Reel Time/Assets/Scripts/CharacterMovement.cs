@@ -2,11 +2,12 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-public class AdvancedCharacterMovement3D : MonoBehaviour
+public class CharacterMovement : MonoBehaviour
 {
     // Components
     private Rigidbody rb;
     private Animator animator;
+    
 
     // Movement parameters
     public float moveSpeed = 5f;

@@ -45,7 +45,28 @@
     <Analyzer Include="/Applications/Unity/Hub/Editor/2022.3.16f1/Unity.app/Contents/Tools/Unity.SourceGenerators/Unity.Properties.SourceGenerator.dll" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Assets/ScriptableObjects/scripts/Vector3DataList.cs" />
+    <Compile Include="Assets/ScriptableObjects/scripts/ColorIDDataList.cs" />
+    <Compile Include="Assets/ScriptableObjects/scripts/ColorIDBehavior.cs" />
     <Compile Include="Assets/Scripts/CharacterMovement.cs" />
+    <Compile Include="Assets/ScriptableObjects/scripts/Instancer.cs" />
+    <Compile Include="Assets/Scripts/DraggableBehavior.cs" />
+    <Compile Include="Assets/Scripts/CheckPointBehavior.cs" />
+    <Compile Include="Assets/Scripts/TextLabelBehavior.cs" />
+    <Compile Include="Assets/Scripts/IDContainerBehavior.cs" />
+    <Compile Include="Assets/ScriptableObjects/scripts/ColorID.cs" />
+    <Compile Include="Assets/ScriptableObjects/scripts/FloatData.cs" />
+    <Compile Include="Assets/Scripts/SpriteBehavior.cs" />
+    <Compile Include="Assets/ScriptableObjects/scripts/CheckPointData.cs" />
+    <Compile Include="Assets/ScriptableObjects/scripts/ID.cs" />
+    <Compile Include="Assets/Scripts/Checkpoint.cs" />
+    <Compile Include="Assets/Scripts/MatchingBehavior.cs" />
+    <Compile Include="Assets/Scripts/MonoEventsBehavior.cs" />
+    <Compile Include="Assets/Scripts/AgentBehaviour.cs" />
+    <Compile Include="Assets/Scripts/DestroyBehavior.cs" />
+    <Compile Include="Assets/ScriptableObjects/scripts/Vector3Data.cs" />
+    <Compile Include="Assets/ScriptableObjects/scripts/IntData.cs" />
+    <Compile Include="Assets/Scripts/CoroutineBehavior.cs" />
     <None Include="Assets/package.json" />
     <Reference Include="UnityEngine">
       <HintPath>/Applications/Unity/Hub/Editor/2022.3.16f1/Unity.app/Contents/Managed/UnityEngine/UnityEngine.dll</HintPath>
@@ -297,10 +318,10 @@
       <HintPath>/Applications/Unity/Hub/Editor/2022.3.16f1/Unity.app/Contents/Managed/UnityEngine/UnityEditor.UnityConnectModule.dll</HintPath>
     </Reference>
     <Reference Include="ReportGeneratorMerged">
-      <HintPath>/Users/braedenuvu/MainGame/Reel Time/Library/PackageCache/com.unity.testtools.codecoverage@1.2.4/lib/ReportGenerator/ReportGeneratorMerged.dll</HintPath>
+      <HintPath>/Users/braedenuvu/MainGame/MainGameProfile/Reel Time/Library/PackageCache/com.unity.testtools.codecoverage@1.2.4/lib/ReportGenerator/ReportGeneratorMerged.dll</HintPath>
     </Reference>
     <Reference Include="Unity.VisualScripting.Antlr3.Runtime">
-      <HintPath>/Users/braedenuvu/MainGame/Reel Time/Library/PackageCache/com.unity.visualscripting@1.9.1/Runtime/VisualScripting.Flow/Dependencies/NCalc/Unity.VisualScripting.Antlr3.Runtime.dll</HintPath>
+      <HintPath>/Users/braedenuvu/MainGame/MainGameProfile/Reel Time/Library/PackageCache/com.unity.visualscripting@1.9.1/Runtime/VisualScripting.Flow/Dependencies/NCalc/Unity.VisualScripting.Antlr3.Runtime.dll</HintPath>
     </Reference>
     <Reference Include="netstandard">
       <HintPath>/Applications/Unity/Hub/Editor/2022.3.16f1/Unity.app/Contents/NetStandard/ref/2.1.0/netstandard.dll</HintPath>
@@ -668,85 +689,89 @@
     <Reference Include="mscorlib">
       <HintPath>/Applications/Unity/Hub/Editor/2022.3.16f1/Unity.app/Contents/NetStandard/compat/2.1.0/shims/netfx/mscorlib.dll</HintPath>
     </Reference>
-    <Reference Include="Unity.Timeline">
-      <HintPath>/Users/braedenuvu/MainGame/Reel Time/Library/ScriptAssemblies/Unity.Timeline.dll</HintPath>
-    </Reference>
-    <Reference Include="Unity.TestTools.CodeCoverage.Editor.OpenCover.Mono.Reflection">
-      <HintPath>/Users/braedenuvu/MainGame/Reel Time/Library/ScriptAssemblies/Unity.TestTools.CodeCoverage.Editor.OpenCover.Mono.Reflection.dll</HintPath>
-    </Reference>
-    <Reference Include="UnityEngine.UI">
-      <HintPath>/Users/braedenuvu/MainGame/Reel Time/Library/ScriptAssemblies/UnityEngine.UI.dll</HintPath>
-    </Reference>
     <Reference Include="Unity.EditorCoroutines.Editor">
-      <HintPath>/Users/braedenuvu/MainGame/Reel Time/Library/ScriptAssemblies/Unity.EditorCoroutines.Editor.dll</HintPath>
+      <HintPath>/Users/braedenuvu/MainGame/MainGameProfile/Reel Time/Library/ScriptAssemblies/Unity.EditorCoroutines.Editor.dll</HintPath>
     </Reference>
-    <Reference Include="Unity.VisualScripting.SettingsProvider.Editor">
-      <HintPath>/Users/braedenuvu/MainGame/Reel Time/Library/ScriptAssemblies/Unity.VisualScripting.SettingsProvider.Editor.dll</HintPath>
-    </Reference>
-    <Reference Include="Unity.Performance.Profile-Analyzer.Editor">
-      <HintPath>/Users/braedenuvu/MainGame/Reel Time/Library/ScriptAssemblies/Unity.Performance.Profile-Analyzer.Editor.dll</HintPath>
-    </Reference>
-    <Reference Include="Unity.TestTools.CodeCoverage.Editor">
-      <HintPath>/Users/braedenuvu/MainGame/Reel Time/Library/ScriptAssemblies/Unity.TestTools.CodeCoverage.Editor.dll</HintPath>
-    </Reference>
-    <Reference Include="Unity.TestTools.CodeCoverage.Editor.OpenCover.Model">
-      <HintPath>/Users/braedenuvu/MainGame/Reel Time/Library/ScriptAssemblies/Unity.TestTools.CodeCoverage.Editor.OpenCover.Model.dll</HintPath>
+    <Reference Include="Unity.AI.Navigation">
+      <HintPath>/Users/braedenuvu/MainGame/MainGameProfile/Reel Time/Library/ScriptAssemblies/Unity.AI.Navigation.dll</HintPath>
     </Reference>
     <Reference Include="Unity.PlasticSCM.Editor">
-      <HintPath>/Users/braedenuvu/MainGame/Reel Time/Library/ScriptAssemblies/Unity.PlasticSCM.Editor.dll</HintPath>
-    </Reference>
-    <Reference Include="Unity.VisualScripting.State.Editor">
-      <HintPath>/Users/braedenuvu/MainGame/Reel Time/Library/ScriptAssemblies/Unity.VisualScripting.State.Editor.dll</HintPath>
+      <HintPath>/Users/braedenuvu/MainGame/MainGameProfile/Reel Time/Library/ScriptAssemblies/Unity.PlasticSCM.Editor.dll</HintPath>
     </Reference>
     <Reference Include="Unity.Timeline.Editor">
-      <HintPath>/Users/braedenuvu/MainGame/Reel Time/Library/ScriptAssemblies/Unity.Timeline.Editor.dll</HintPath>
+      <HintPath>/Users/braedenuvu/MainGame/MainGameProfile/Reel Time/Library/ScriptAssemblies/Unity.Timeline.Editor.dll</HintPath>
     </Reference>
     <Reference Include="Unity.VisualScripting.Shared.Editor">
-      <HintPath>/Users/braedenuvu/MainGame/Reel Time/Library/ScriptAssemblies/Unity.VisualScripting.Shared.Editor.dll</HintPath>
+      <HintPath>/Users/braedenuvu/MainGame/MainGameProfile/Reel Time/Library/ScriptAssemblies/Unity.VisualScripting.Shared.Editor.dll</HintPath>
     </Reference>
     <Reference Include="Unity.VisualStudio.Editor">
-      <HintPath>/Users/braedenuvu/MainGame/Reel Time/Library/ScriptAssemblies/Unity.VisualStudio.Editor.dll</HintPath>
-    </Reference>
-    <Reference Include="Unity.TextMeshPro">
-      <HintPath>/Users/braedenuvu/MainGame/Reel Time/Library/ScriptAssemblies/Unity.TextMeshPro.dll</HintPath>
-    </Reference>
-    <Reference Include="Unity.VisualScripting.Core">
-      <HintPath>/Users/braedenuvu/MainGame/Reel Time/Library/ScriptAssemblies/Unity.VisualScripting.Core.dll</HintPath>
-    </Reference>
-    <Reference Include="Unity.TextMeshPro.Editor">
-      <HintPath>/Users/braedenuvu/MainGame/Reel Time/Library/ScriptAssemblies/Unity.TextMeshPro.Editor.dll</HintPath>
+      <HintPath>/Users/braedenuvu/MainGame/MainGameProfile/Reel Time/Library/ScriptAssemblies/Unity.VisualStudio.Editor.dll</HintPath>
     </Reference>
     <Reference Include="UnityEditor.UI">
-      <HintPath>/Users/braedenuvu/MainGame/Reel Time/Library/ScriptAssemblies/UnityEditor.UI.dll</HintPath>
+      <HintPath>/Users/braedenuvu/MainGame/MainGameProfile/Reel Time/Library/ScriptAssemblies/UnityEditor.UI.dll</HintPath>
+    </Reference>
+    <Reference Include="Unity.VisualScripting.Core">
+      <HintPath>/Users/braedenuvu/MainGame/MainGameProfile/Reel Time/Library/ScriptAssemblies/Unity.VisualScripting.Core.dll</HintPath>
+    </Reference>
+    <Reference Include="UnityEngine.UI">
+      <HintPath>/Users/braedenuvu/MainGame/MainGameProfile/Reel Time/Library/ScriptAssemblies/UnityEngine.UI.dll</HintPath>
     </Reference>
     <Reference Include="Unity.VisualScripting.Core.Editor">
-      <HintPath>/Users/braedenuvu/MainGame/Reel Time/Library/ScriptAssemblies/Unity.VisualScripting.Core.Editor.dll</HintPath>
+      <HintPath>/Users/braedenuvu/MainGame/MainGameProfile/Reel Time/Library/ScriptAssemblies/Unity.VisualScripting.Core.Editor.dll</HintPath>
     </Reference>
     <Reference Include="Unity.Rider.Editor">
-      <HintPath>/Users/braedenuvu/MainGame/Reel Time/Library/ScriptAssemblies/Unity.Rider.Editor.dll</HintPath>
-    </Reference>
-    <Reference Include="Unity.VisualScripting.State">
-      <HintPath>/Users/braedenuvu/MainGame/Reel Time/Library/ScriptAssemblies/Unity.VisualScripting.State.dll</HintPath>
-    </Reference>
-    <Reference Include="Unity.VSCode.Editor">
-      <HintPath>/Users/braedenuvu/MainGame/Reel Time/Library/ScriptAssemblies/Unity.VSCode.Editor.dll</HintPath>
+      <HintPath>/Users/braedenuvu/MainGame/MainGameProfile/Reel Time/Library/ScriptAssemblies/Unity.Rider.Editor.dll</HintPath>
     </Reference>
     <Reference Include="Unity.VisualScripting.Flow">
-      <HintPath>/Users/braedenuvu/MainGame/Reel Time/Library/ScriptAssemblies/Unity.VisualScripting.Flow.dll</HintPath>
+      <HintPath>/Users/braedenuvu/MainGame/MainGameProfile/Reel Time/Library/ScriptAssemblies/Unity.VisualScripting.Flow.dll</HintPath>
     </Reference>
     <Reference Include="Unity.VisualScripting.Flow.Editor">
-      <HintPath>/Users/braedenuvu/MainGame/Reel Time/Library/ScriptAssemblies/Unity.VisualScripting.Flow.Editor.dll</HintPath>
+      <HintPath>/Users/braedenuvu/MainGame/MainGameProfile/Reel Time/Library/ScriptAssemblies/Unity.VisualScripting.Flow.Editor.dll</HintPath>
+    </Reference>
+    <Reference Include="Unity.Timeline">
+      <HintPath>/Users/braedenuvu/MainGame/MainGameProfile/Reel Time/Library/ScriptAssemblies/Unity.Timeline.dll</HintPath>
+    </Reference>
+    <Reference Include="Unity.TestTools.CodeCoverage.Editor.OpenCover.Mono.Reflection">
+      <HintPath>/Users/braedenuvu/MainGame/MainGameProfile/Reel Time/Library/ScriptAssemblies/Unity.TestTools.CodeCoverage.Editor.OpenCover.Mono.Reflection.dll</HintPath>
+    </Reference>
+    <Reference Include="Unity.VisualScripting.SettingsProvider.Editor">
+      <HintPath>/Users/braedenuvu/MainGame/MainGameProfile/Reel Time/Library/ScriptAssemblies/Unity.VisualScripting.SettingsProvider.Editor.dll</HintPath>
+    </Reference>
+    <Reference Include="Unity.Performance.Profile-Analyzer.Editor">
+      <HintPath>/Users/braedenuvu/MainGame/MainGameProfile/Reel Time/Library/ScriptAssemblies/Unity.Performance.Profile-Analyzer.Editor.dll</HintPath>
+    </Reference>
+    <Reference Include="Unity.TestTools.CodeCoverage.Editor">
+      <HintPath>/Users/braedenuvu/MainGame/MainGameProfile/Reel Time/Library/ScriptAssemblies/Unity.TestTools.CodeCoverage.Editor.dll</HintPath>
+    </Reference>
+    <Reference Include="Unity.TestTools.CodeCoverage.Editor.OpenCover.Model">
+      <HintPath>/Users/braedenuvu/MainGame/MainGameProfile/Reel Time/Library/ScriptAssemblies/Unity.TestTools.CodeCoverage.Editor.OpenCover.Model.dll</HintPath>
+    </Reference>
+    <Reference Include="Unity.AI.Navigation.Updater">
+      <HintPath>/Users/braedenuvu/MainGame/MainGameProfile/Reel Time/Library/ScriptAssemblies/Unity.AI.Navigation.Updater.dll</HintPath>
+    </Reference>
+    <Reference Include="Unity.VisualScripting.State.Editor">
+      <HintPath>/Users/braedenuvu/MainGame/MainGameProfile/Reel Time/Library/ScriptAssemblies/Unity.VisualScripting.State.Editor.dll</HintPath>
+    </Reference>
+    <Reference Include="Unity.TextMeshPro">
+      <HintPath>/Users/braedenuvu/MainGame/MainGameProfile/Reel Time/Library/ScriptAssemblies/Unity.TextMeshPro.dll</HintPath>
+    </Reference>
+    <Reference Include="Unity.TextMeshPro.Editor">
+      <HintPath>/Users/braedenuvu/MainGame/MainGameProfile/Reel Time/Library/ScriptAssemblies/Unity.TextMeshPro.Editor.dll</HintPath>
+    </Reference>
+    <Reference Include="Unity.AI.Navigation.Editor">
+      <HintPath>/Users/braedenuvu/MainGame/MainGameProfile/Reel Time/Library/ScriptAssemblies/Unity.AI.Navigation.Editor.dll</HintPath>
+    </Reference>
+    <Reference Include="Unity.VisualScripting.State">
+      <HintPath>/Users/braedenuvu/MainGame/MainGameProfile/Reel Time/Library/ScriptAssemblies/Unity.VisualScripting.State.dll</HintPath>
+    </Reference>
+    <Reference Include="Unity.VSCode.Editor">
+      <HintPath>/Users/braedenuvu/MainGame/MainGameProfile/Reel Time/Library/ScriptAssemblies/Unity.VSCode.Editor.dll</HintPath>
+    </Reference>
+    <Reference Include="Unity.AI.Navigation.Editor.ConversionSystem">
+      <HintPath>/Users/braedenuvu/MainGame/MainGameProfile/Reel Time/Library/ScriptAssemblies/Unity.AI.Navigation.Editor.ConversionSystem.dll</HintPath>
     </Reference>
   </ItemGroup>
   <ItemGroup>
-    <ProjectReference Include="HoudiniEngineUnityEditor.csproj">
-      <Project>{bec99ff9-8329-e1fe-899f-b38cbf1e039f}</Project>
-      <Name>HoudiniEngineUnityEditor</Name>
-    </ProjectReference>
-    <ProjectReference Include="HoudiniEngineUnity.VisualScripting.csproj">
-      <Project>{0866642e-a67e-a46c-c030-34e123df6fe3}</Project>
-      <Name>HoudiniEngineUnity.VisualScripting</Name>
-    </ProjectReference>
     <ProjectReference Include="HoudiniEngineUnityEditor.VisualScripting.csproj">
       <Project>{c583832c-420f-267a-de30-89c272996f2a}</Project>
       <Name>HoudiniEngineUnityEditor.VisualScripting</Name>
@@ -754,6 +779,14 @@
     <ProjectReference Include="HoudiniEngineUnity.csproj">
       <Project>{085900c3-a845-f32d-7f35-85554d0c341f}</Project>
       <Name>HoudiniEngineUnity</Name>
+    </ProjectReference>
+    <ProjectReference Include="HoudiniEngineUnityEditor.csproj">
+      <Project>{bec99ff9-8329-e1fe-899f-b38cbf1e039f}</Project>
+      <Name>HoudiniEngineUnityEditor</Name>
+    </ProjectReference>
+    <ProjectReference Include="HoudiniEngineUnity.VisualScripting.csproj">
+      <Project>{0866642e-a67e-a46c-c030-34e123df6fe3}</Project>
+      <Name>HoudiniEngineUnity.VisualScripting</Name>
     </ProjectReference>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
