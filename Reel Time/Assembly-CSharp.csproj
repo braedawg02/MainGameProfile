@@ -45,10 +45,12 @@
     <Analyzer Include="/Applications/Unity/Hub/Editor/2022.3.16f1/Unity.app/Contents/Tools/Unity.SourceGenerators/Unity.Properties.SourceGenerator.dll" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Assets/ScriptableObjects/Fishing/FishManager.cs" />
     <Compile Include="Assets/ScriptableObjects/scripts/Vector3DataList.cs" />
     <Compile Include="Assets/ScriptableObjects/scripts/ColorIDDataList.cs" />
     <Compile Include="Assets/ScriptableObjects/scripts/ColorIDBehavior.cs" />
     <Compile Include="Assets/Scripts/CharacterMovement.cs" />
+    <Compile Include="Assets/ScriptableObjects/Fishing/FishingSpot.cs" />
     <Compile Include="Assets/ScriptableObjects/scripts/Instancer.cs" />
     <Compile Include="Assets/Scripts/DraggableBehavior.cs" />
     <Compile Include="Assets/Scripts/CheckPointBehavior.cs" />
@@ -61,13 +63,38 @@
     <Compile Include="Assets/ScriptableObjects/scripts/ID.cs" />
     <Compile Include="Assets/Scripts/Checkpoint.cs" />
     <Compile Include="Assets/Scripts/MatchingBehavior.cs" />
+    <Compile Include="Assets/Scripts/fishing2DController.cs" />
+    <Compile Include="Assets/ScriptableObjects/Fishing/FishData.cs" />
     <Compile Include="Assets/Scripts/MonoEventsBehavior.cs" />
     <Compile Include="Assets/Scripts/AgentBehaviour.cs" />
     <Compile Include="Assets/Scripts/DestroyBehavior.cs" />
     <Compile Include="Assets/ScriptableObjects/scripts/Vector3Data.cs" />
+    <Compile Include="Assets/Scripts/CamBehavior.cs" />
     <Compile Include="Assets/ScriptableObjects/scripts/IntData.cs" />
     <Compile Include="Assets/Scripts/CoroutineBehavior.cs" />
+    <None Include="Assets/TextMesh Pro/Shaders/TMPro.cginc" />
+    <None Include="Assets/TextMesh Pro/Shaders/TMP_SDF-Mobile Overlay.shader" />
+    <None Include="Assets/TextMesh Pro/Shaders/TMP_Bitmap.shader" />
+    <None Include="Assets/TextMesh Pro/Shaders/TMPro_Mobile.cginc" />
+    <None Include="Assets/TextMesh Pro/Shaders/TMP_SDF SSD.shader" />
+    <None Include="Assets/TextMesh Pro/Shaders/TMP_SDF-Surface-Mobile.shader" />
+    <None Include="Assets/TextMesh Pro/Shaders/TMP_SDF-Surface.shader" />
+    <None Include="Assets/TextMesh Pro/Sprites/EmojiOne Attribution.txt" />
     <None Include="Assets/package.json" />
+    <None Include="Assets/TextMesh Pro/Shaders/TMP_Bitmap-Custom-Atlas.shader" />
+    <None Include="Assets/TextMesh Pro/Shaders/TMP_SDF.shader" />
+    <None Include="Assets/TextMesh Pro/Shaders/TMP_SDF-Mobile SSD.shader" />
+    <None Include="Assets/TextMesh Pro/Resources/LineBreaking Leading Characters.txt" />
+    <None Include="Assets/TextMesh Pro/Shaders/TMPro_Properties.cginc" />
+    <None Include="Assets/TextMesh Pro/Shaders/TMPro_Surface.cginc" />
+    <None Include="Assets/TextMesh Pro/Resources/LineBreaking Following Characters.txt" />
+    <None Include="Assets/TextMesh Pro/Shaders/TMP_SDF-Mobile Masking.shader" />
+    <None Include="Assets/TextMesh Pro/Shaders/TMP_SDF Overlay.shader" />
+    <None Include="Assets/TextMesh Pro/Shaders/TMP_Bitmap-Mobile.shader" />
+    <None Include="Assets/TextMesh Pro/Fonts/LiberationSans - OFL.txt" />
+    <None Include="Assets/TextMesh Pro/Shaders/TMP_SDF-Mobile.shader" />
+    <None Include="Assets/TextMesh Pro/Sprites/EmojiOne.json" />
+    <None Include="Assets/TextMesh Pro/Shaders/TMP_Sprite.shader" />
     <Reference Include="UnityEngine">
       <HintPath>/Applications/Unity/Hub/Editor/2022.3.16f1/Unity.app/Contents/Managed/UnityEngine/UnityEngine.dll</HintPath>
     </Reference>
@@ -764,11 +791,11 @@
     <Reference Include="Unity.VisualScripting.State">
       <HintPath>/Users/braedenuvu/MainGame/MainGameProfile/Reel Time/Library/ScriptAssemblies/Unity.VisualScripting.State.dll</HintPath>
     </Reference>
-    <Reference Include="Unity.VSCode.Editor">
-      <HintPath>/Users/braedenuvu/MainGame/MainGameProfile/Reel Time/Library/ScriptAssemblies/Unity.VSCode.Editor.dll</HintPath>
-    </Reference>
     <Reference Include="Unity.AI.Navigation.Editor.ConversionSystem">
       <HintPath>/Users/braedenuvu/MainGame/MainGameProfile/Reel Time/Library/ScriptAssemblies/Unity.AI.Navigation.Editor.ConversionSystem.dll</HintPath>
+    </Reference>
+    <Reference Include="Unity.VSCode.Editor">
+      <HintPath>/Users/braedenuvu/MainGame/MainGameProfile/Reel Time/Library/ScriptAssemblies/Unity.VSCode.Editor.dll</HintPath>
     </Reference>
   </ItemGroup>
   <ItemGroup>

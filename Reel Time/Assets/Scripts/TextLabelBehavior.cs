@@ -27,5 +27,10 @@ public class TextLabelBehavior : MonoBehaviour
       label.text = obj.value.ToString(CultureInfo.InvariantCulture);
    }
 
+   public void UpdateLabel(FishData fish)
+   {
+      label.text = ("fish price: " + fish.value.ToString(CultureInfo.InvariantCulture));
+   }
+
 
 }
